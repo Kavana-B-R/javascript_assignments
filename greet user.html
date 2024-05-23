@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>greetuser</title>
+    <style>
+        *{
+           background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <label>
+        username:
+    </label>
+    <input type="text" name="" id="username">
+    <br>
+    <br>
+    <button onclick="greetuser()">greetuser</button>
+    <script>
+        function greetuser()
+        {
+            var username=document.getElementById("username").value
+            document.write("welcome!!"+username);
+        }
+    </script>
+</body>
+</html>
