@@ -1,0 +1,153 @@
+/* Base styles */
+body {
+    background-color: #f3e0cc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Game container */
+.game-container {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Heading styles */
+h1 {
+    color: #333;
+    font-size: 3em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Choices container */
+.choices {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Individual choice styles */
+.choice {
+    font-size: 30px;
+    margin: 0 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px 25px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.choice:hover {
+    transform: scale(1.05);
+}
+
+.choice::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.choice:hover::after,
+.choice.selected::after {
+    opacity: 1;
+}
+
+/* Styles for specific choices */
+.choice i {
+    margin-right: 10px;
+}
+
+#rock, #paper, #scissors {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#rock:hover, #paper:hover, #scissors:hover {
+    transform: scale(1.05);
+}
+
+#rock::after, #paper::after, #scissors::after {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#rock {
+    background-color: #f44336;
+    color: #fff;
+}
+
+#paper {
+    background-color: #2196f3;
+    color: #fff;
+}
+
+#scissors {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+/* Reset button styles */
+.reset-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 24px;
+    margin-top: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.reset-button:hover {
+    background-color: #555;
+}
+
+/* Result text styles */
+.result {
+    font-size: 24px;
+    color: #555;
+    text-align: center;
+    margin-top: 50px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Scoreboard styles */
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-size: 2em;
+    color: #333;
+}
+
+.scoreboard > div {
+    margin: 0 40px;
+    border: 2px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}

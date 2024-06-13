@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #f0f0f0;
+}
+
+.game-container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 5px 0;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.score {
+    background: #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100px;
+}
+
+.score span {
+    display: block;
+    font-size: 2em;
+}
+
+.choices {
+    margin: 20px 0;
+}
+
+.choices button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1em;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.choices button:hover {
+    background: #45a049;
+}
+
+.results {
+    margin: 20px 0;
+}
+
+.results p {
+    font-size: 1.2em;
+}
+
+#winner {
+    color: #d9534f;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
